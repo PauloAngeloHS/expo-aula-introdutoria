@@ -7,6 +7,8 @@ import { useFonts } from 'expo-font';
 export default function App() {
   const [fontsLoaded] = useFonts({
     'Inter-Black': require('./assets/fonts/Inter-Black.ttf'),
+    'CharisSIL-Bold': require('./assets/fonts/CharisSIL-Bold.ttf'),
+
   });
   if (!fontsLoaded) {
     return <Text>Not loaded</Text>;
@@ -14,7 +16,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Paulo Angelo HS</Text>
-      <Text style={styles.title}>Banana</Text>
+      <Text style={styles.paragraf}>Banana</Text>
       <Image source={car} style={styles.image}></Image>
     </View>
   );
@@ -30,6 +32,11 @@ const styles = StyleSheet.create({
   title: {
     color: '#fff',
     fontFamily: 'Inter-Black',
+    fontSize: 30 
+  },
+  paragraf:{
+    color: '#fff',
+    fontFamily: 'CharisSIL-Bold',
     fontSize: 30 
   },
   image:{
